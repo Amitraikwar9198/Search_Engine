@@ -1,5 +1,5 @@
-// alert("HII \n Welcome To My Image Search Engine")
-alert("amit Kashyap")
+alert("HII \n Welcome To Image Search Engine")
+
 const accessKey = "RnTJ9QL8h1JN07i60N-WL-sFDf4K-_Y4HwASC4R6GSo";
 const searchform = document.getElementById("search-form");
 const searchBox = document.getElementById("search-box");
@@ -38,6 +38,13 @@ async function searchImage() {
     console.error("Failed to fetch images:", error);
   }
 }
+function toggleMobileMenu() {
+      const menu = document.getElementById('mobileHeader1');
+      const overlay = document.getElementById('overlay');
+      menu.classList.toggle('show');
+      overlay.classList.toggle('show');
+    }
+
 
 searchform.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -49,20 +56,3 @@ showMoreBtn.addEventListener("click", () => {
   page++;
   searchImage();
 });
-
-// var swiper = new Swiper(".mySwiper", {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: "auto",
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
