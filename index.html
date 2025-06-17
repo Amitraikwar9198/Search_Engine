@@ -7,133 +7,80 @@
   <title>Image Search Engine</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="searcheng.css" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 </head>
 
 <body>
-  <div class="header1">
+ <div class="mobile-menu-button" onclick="toggleMobileMenu()">&#9776;</div>
+  <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
+  <div class="logo">  <h2>📸Image-Search-Engine</h2></div>
+  <nav class="mobile-header1" id="mobileHeader1">
+    
     <a href="#home">HOME</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <a href="#">abc</a>
-  </div>
+    <!-- <a href="#">ABC</a> -->
+  </nav>
 
-  <div class="header">
-    <div class="back-nav">
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
+  <header class="header1">
+    <h2>📸Image-Search-Engine</h2>
+    <a href="#home">HOME</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <!-- <a href="#">ABC</a> -->
+  </header>
 
-          <span></span>
-          <span></span>
-          <span></span>
+ 
 
-          <ul id="menu">
-            <a href="http://127.0.0.1:5500/website%20design/manu.html#" target="_main">
-              <li>Home</li>
-            </a>
-            <a href="#">
-              <li>About</li>
-            </a>
-            <a href="#">
-              <li>Contact</li>
-            </a>
+    <section class="box" id="home">
+      <span style="--i: 1;"><a href="./photos/z1.jpg"><img src="./photos/z1.jpg" alt="Image 1"></a></span>
+      <span style="--i: 2;"><a href="./photos/z2.jpg"><img src="./photos/z2.jpg" alt="Image 2"></a></span>
+      <span style="--i: 3;"><a href="./photos/z3.jpg"><img src="./photos/z3.jpg" alt="Image 3"></a></span>
+      <span style="--i: 4;"><a href="./photos/z4.jpg"><img src="./photos/z4.jpg" alt="Image 4"></a></span>
+      <span style="--i: 5;"><a href="./photos/z5.webp"><img src="./photos/z5.webp" alt="Image 5"></a></span>
+      <span style="--i: 6;"><a href="./photos/z6.jpg"><img src="./photos/z6.jpg" alt="Image 6"></a></span>
+      <span style="--i: 7;"><a href="./photos/z7.jpg"><img src="./photos/z7.jpg" alt="Image 7"></a></span>
+      <span style="--i: 8;"><a href="./photos/z8.jpg"><img src="./photos/z8.jpg" alt="Image 8"></a></span>
+    </section>
 
-          </ul>
-        </div>
-      </nav>
-     
-      <a name="home"></a>
-      <div class="box">
-        <span style="--i: 1;"><a
-            href=" http://127.0.0.1:5500/website%20design/photos/z1.jpghttp://127.0.0.1:5500/website%20design/photos/z1.jpg"><img
-              src="./photos/z1.jpg" alt="no image"></a> </span>
-
-        <span style="--i: 2;"><a href="http://127.0.0.1:5500/website%20design/photos/z2.jpg"><img src="./photos/z2.jpg"
-              alt="no image"></a> </span>
-        <span style="--i: 3;"><a href=" http://127.0.0.1:5500/website%20design/photos/z3.jpg"><img src="./photos/z3.jpg"
-              alt="no image"></a></span>
-        <span style="--i: 4;"><a href="http://127.0.0.1:5500/website%20design/photos/z4.jpg "><img src="./photos/z4.jpg"
-              alt="no image"></a></span>
-        <span style="--i: 5;"><a href="http://127.0.0.1:5500/website%20design/photos/z5.webp "><img
-              src="./photos/z5.webp" alt="no image"> </a></span>
-        <span style="--i: 6;"><a href="http://127.0.0.1:5500/website%20design/photos/z6.jpg "><img src="./photos/z6.jpg"
-              alt="no image"></a></span>
-        <span style="--i: 7;"><a href=" http://127.0.0.1:5500/website%20design/photos/z7.jpg"><img src="./photos/z7.jpg"
-              alt="no image"></a></span>
-        <span style="--i: 8;"><a href="http://127.0.0.1:5500/website%20design/photos/z8.jpg "><img src="./photos/z8.jpg"
-              alt="no image"></a> </span>
-
-
-
-
-
-      </div>
-      <div class="seach-engine">
-        <h1>Image Search Engine</h1>
-      </div>
-
+    <section class="seach-engine">
+      <h1>Image Search Engine</h1>
       <form id="search-form">
         <input type="text" id="search-box" placeholder="Search anything here" />
-        <button class="searc">Search</button>
+        <button type="submit" class="searc">Search</button>
       </form>
-
       <div id="search-result"></div>
       <button id="show-more-btn">Show more</button>
-    </div>
+    </section>
+  </main>
 
-
-  </div>
-  </div>
-
-  <hr />
   <footer>
-    <a name="about"></a>
-    <div class="about">
+    <section class="about" id="about">
       <h3>About</h3>
       <p>
-        Welcome to our amazing webpage! 🎉 <br />
-        Here, your imagination is the only limit. Looking for a specific
-        image? You've come to the right place! Our powerful search feature
-        allows you to find any image you desire. Whether it's a breathtaking
-        landscape, a cute puppy, or a stunning piece of art, we've got you
-        covered. Just type in what you're looking for in the search bar, and
-        let us do the rest. We're dedicated to making your image search as
-        easy and enjoyable as possible. So go ahead, start exploring, and
-        let the images inspire you! Happy searching! 🌟
+        Welcome to our amazing webpage! 🎉 Looking for a specific image? You've come to the right place! Our powerful
+        search feature helps you find what you're looking for — landscapes, cute puppies, stunning art — and more!
+        Type your query, and let the inspiration begin! 🌟
       </p>
-    </div>
-    <hr />
-    <a name="contact"></a>
-
-    <h3 class="hello">Contacts</h3>
-    <div class="icon">
-      <div class="linkedin">
-        <a href="https://www.linkedin.com/in/amit-raikwar-9789b7301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_main">
+    </section>
+<hr>
+    <section class="contact" id="contact">
+      <h3 class="hello">Contacts</h3>
+      <div class="icon">
+        <a href="https://www.linkedin.com/in/amit-raikwar-9789b7301" target="_blank">
           <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-      </div>
-      <div class="gmail">
-        <a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSKjRSzdNbjXnrHFFkMVxpHRgjBXJnvbdthBcnBVJtkWPBBKBdcgcTSPTbWXZSXZwVbGwsNx"
-          target="_main">
+        <a href="mailto:yourmail@example.com" target="_blank">
           <i class="fa fa-envelope" aria-hidden="true"></i></a>
-      </div>
-      <div class="instragram">
-        <a href="https://www.instagram.com/mr_.amit_kashyap?igsh=MTNoNWNibXcyZjFpdw==">
+        <a href="https://www.instagram.com/mr_.amit_kashyap" target="_blank">
           <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
-      </div>
-      <div class="facebook">
-        <a href="https://www.facebook.com/profile.php?id=61559569580593&mibextid=ZbWKwL">
+        <a href="https://www.facebook.com/profile.php?id=61559569580593" target="_blank">
           <i class="fa fa-facebook-official" aria-hidden="true"></i>
         </a>
       </div>
-    </div>
-    <hr />
+    </section>
   </footer>
-  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="searcheng.js"></script>
 </body>
