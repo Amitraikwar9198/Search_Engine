@@ -1,515 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
+}
+
+.header1 {
+  display: flex;
+  background: #000;
+  padding: 1rem;
+  text-align: center;
+}
+.header1 h2{
   
-    box-sizing: border-box;
-  }
-  body {
-    background-clip: border-box;
-    background-image: url(./photos/Z66.jpg);
-    color: black;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  /* .back-nav{
-      
-       box-shadow:-1px -.5px 10px 10px #d0d0d0 ;
-      
-  }
-  */
-  .header1{
-    border: 0px solid;
-    width: 100%;
-    margin-top: 0px;
-    padding: 25px;
-    text-align: right;
-    position: fixed;
-  z-index: 1000;
-  background: #ffffff;
+  background: #000;
+  display: flex;
+  justify-content: left;
+  padding: 0px;
+  padding-right: 12rem;
   
+}
+
+.header1 a {
+
+  color: #fff;
+
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.header1 a:hover {
+  color: #00bcd4;
+}
+h2{
+  background-color: #111;
+  padding-left: 7rem;
+  padding-top: 30px;
+  color: white;
+   font-family: " sans-serif";
+  font-weight: 400;
+ 
+}
+/* Gallery Rotation Box */
+.box {
   
-  }
-  .header1 a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-    padding: 60px;
-  
-  }
-  .header1 a:hover{
-    color: #001eff;
-  }
-  
-  /* photos header  */
-  /* 
-  .swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 50%;
-  }
-   */
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   .box
-  
-  {
-    margin: auto;
-    margin-top: 80px;
-    /* margin-left: 800px;
-    margin-top: 150px; */
-  
-  position: relative;
-  
-  width: 200px;
-  
-  height: 200px;
-  
-  transform-style: preserve-3d;
-  
-  animation: animate 20s linear infinite;
-  
-  }
-  
-  @keyframes animate
-  
-  {
-  
-  0%
-  
-  {
-  
-  transform: perspective(1000px) rotateY(500deg);
-  
-  }
-  100%
-  
-  {
-  
-  transform: perspective (0px) rotateY(350deg);
-  
-  }
-  
-  }
-  .box span
-  
-  {
-  
-  position: absolute;
-  
-  top: 0;
-  
-  Left: 0;
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #e3f2fd, #fff);
+}
+
+.box span {
+  display: inline-block;
+  width: 180px;
+  transition: transform 0.2s ease;
+}
+
+.box span img {
   width: 100%;
-  
-  height: 100%;
-  
-  transform-origin: center;
-  
-  transform-style: preserve-3d;
-  
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px) ;
-  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004); 
-  
-  }
-  
-  .box span img
-  
-  {
-    border-radius: 10px;
-  
-  position: absolute;
-  
-  top: 0;
-  
-  Left: 0;
-  
-  width: 100%;
-  
-  height: 100%;
-  
+  border-radius: 10px;
   object-fit: cover;
-  } 
-  
-  div.seach-engine h1 {
-    font-size: 60px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    text-align: center;
-    margin: 100px auto 50px;
-    font-weight: 700;
-    background-image: url("./photos/z45.gif");
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: transform 0.9s;
+  transition: transform 0.4s ease;
+}
+
+.box span:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Engine Title */
+.seach-engine {
+  text-align: center;
+  background: #673ab7;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.seach-engine h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Search Form */
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#search-box {
+  padding: 12px 20px;
+  width: 60%;
+  max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#search-box:focus {
+  border-color: #00bcd4;
+}
+
+.searc {
+  padding: 12px 25px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #ff5722;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.searc:hover {
+  background: #e64a19;
+}
+
+/* Search Result Gallery */
+#search-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 15px;
+}
+
+#search-result img {
+  width: 21.3rem;
+  height: 17rem;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#search-result img:hover {
+  transform: scale(1.05);
+}
+
+/* Show More Button */
+#show-more-btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#show-more-btn:hover {
+  background: #388e3c;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ddd;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.icon {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icon i {
+  font-size: 2.2rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.icon i:hover {
+  color: #00bcd4;
+}
+
+/* Navigation menuToggle for mobile */
+#menuToggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: block;
+}
+
+#menuToggle input {
+  display: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #333;
+  border-radius: 3px;
+}
+
+#menu {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#menu li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seach-engine h1 {
+    font-size: 2rem;
   }
-  div.seach-engine h1:hover{
-  transform: scale(.5);
-  }
-  form {
+
+  #search-box {
     width: 90%;
-    width: 600px;
-    margin: auto;
-    height: 80px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    box-shadow: 10px 10px 20px rgb(14, 135, 227);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
   }
-  form input {
-    flex: 1;
-    height: 100%;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    color: rgb(255, 0, 0);
-    font-size: 18px;
-    padding: 0 30px;
+
+  .box span {
+    width: 45%;
   }
-  
-  form button {
-    padding: 0 40px;
-    height: 100%;
-    background: #ff3929;
-    color: #000000;
-    font-size: 18px;
-    border: 0;
-    outline: 0;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    cursor: pointer;
+
+  footer h3 {
+    
+    font-size: 1.4rem;
   }
-  ::placeholder {
-    color: #000000;
-    font-size: 18px;
-  }
-  #show-more-btn {
-    background-color: #ff3929;
-    color: #fff;
-    border: 0;
-    outline: 0;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin: 10px auto 100px;
-    cursor: pointer;
-    display: none;
-  }
-  #search-result {
-    width: 80%;
-    margin: 100px auto 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 40px;
+
+  .icon {
+    
+    flex-wrap: wrap;
+    gap: 15px;
   }
   #search-result img {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 20px;
-  
-    padding: 20px;
-    border: 5px solid rgb(82, 165, 228);
-    box-shadow: -1px -0.5px 10px 10px rgb(82, 165, 228);
-  
-    transition: transform 0.8s;
+    width: 9.5rem;
+    height: 10rem;
   }
-  #search-result img:hover {
-    transform: scale(1.1);
-  }
-  p {
-    color: #000000;
-  }
-  
-  div.img img {
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-  
-    box-shadow: -1px -0.5px 10px 10px rgb(82, 165, 228);
-    object-fit: cover;
-    transition: transform 0.8s;
-    height: 20%;
-  }
-  div.img img:hover {
-    transform: scale(1.1);
-  }
-  
-  div.img .first-img {
-    display: flex;
-    padding: 20px;
-  }
-  div.img .first-img a {
-    display: flex;
-    padding: 20px;
-  }
-  div.img .secound-img {
-    display: flex;
-    padding: 20px;
-  }
-  div.img .secound-img a {
-    display: flex;
-    padding: 20px;
-  }
-  div.img a {
-    text-decoration: none;
-    color: #000000;
-  }
-  div.img a:hover {
-    color: #001eff;
-  }
-  
-  .icon {
-    display: flex;
-    padding: 20px;
-  }
-  div.icon a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-  }
-  
-  div.icon a i {
-    color: #000000;
-    font-size: 50px;
-  }
-  div.icon i:hover {
-    color: #001eff;
-  }
-  div.icon .linkedin {
-    padding-right: 30px;
-  }
-  div.icon .gmail {
-    padding-right: 30px;
-  }
-  div.icon .instragram {
-    padding-right: 30px;
-  }
-  div.icon .facebook {
-    padding-right: 30px;
-  }
-  .about {
-    margin: 10px;
-    padding: 10px;
-  }
-  div.about p {
-    font-size: 20px;
-  
-    margin: 20px;
-  }
-  div.about h3 {
-    font-size: 50px;
-    color: rgb(253, 160, 0);
-  }
-  h3 {
-    font-size: 50px;
-    color: rgb(255, 162, 39);
-  }
-  
-  #menuToggle {
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-  
-    z-index: 1;
-  
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  
-  #menuToggle a {
-    text-decoration: none;
-    color: #000000;
-  
-    transition: color 0.3s ease;
-  }
-  
-  #menuToggle a:hover {
-    color: rgb(245, 93, 32);
-  }
-  
-  #menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-  
-    cursor: pointer;
-  
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-  
-    -webkit-touch-callout: none;
-  }
-  
-  /*
-   * Just a quick hamburger
-   */
-  #menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-  
-    background: #aeaaaa;
-    border-radius: 3px;
-  
-    z-index: 1;
-  
-    transform-origin: 4px 0px;
-  
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  }
-  
-  #menuToggle span:first-child {
-    transform-origin: 0% 0%;
-  }
-  
-  #menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-  }
-  
-  /* 
-   * Transform all the slices of hamburger
-   * into a crossmark.
-   */
-  #menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #878484;
-  }
-  
-  /*
-   * But let's hide the middle one.
-   */
-  #menuToggle input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-  
-  /*
-   * Ohyeah and the last one should go the other direction
-   */
-  #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-  }
-  
-  /*
-   * Make this absolute positioned
-   * at the top left of the screen
-   */
-  #menu {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-  
-    background: transparent;
-  
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-  
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-  
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-  
-  #menu li {
-    padding: 10px 0;
-    font-size: 22px;
-  }
-  
-  /*
-   * And let's slide it in from the left
-   */
-  #menuToggle input:checked ~ ul {
-    transform: none;
-  }
-  
-  @media (max-width: 991px) {
-    html {
-      font-size: 55%;
+}
+.box {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: #f0f0f0;
+      padding: 1rem 0;
     }
-    .header {
-      padding: 2rem;
+
+    .box span {
+      display: inline-block;
+      animation: scroll 40s linear infinite;
+      margin-right: 20px;
     }
-  }
-  @media (max-width: 750px) {
-    div.about p {
-      font-size: 15px;
-  
-      margin: 10px;
+    
+
+ .mobile-menu-button {
+  color: #fff;
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      /* margin: 1rem; */
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      z-index: 1001;
     }
-    div.about h3 {
-      font-size: 35px;
-      color: rgb(255, 156, 27);
+
+    .mobile-header1 {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s ease;
+      z-index: 1000;
     }
-  }
-  @media (max-width: 400px) {
-    .header .seach-engine h1 {
-      font-size: 30px;
+
+    .mobile-header1 a {
+      display: block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
     }
-    .header form {
-      margin: 1px;
-      height: 50px;
-      width: 300px;
+
+    .mobile-header1.show {
+      left: 0;
     }
-    div.about p {
-      font-size: 10px;
-  
-      margin-left: 5px;
+
+    .logo{
+      display: none;
+      
     }
-    div.about h3 {
-      font-size: 20px;
-      color: rgb(255, 159, 33);
+    .logo h2{
+      padding: 20px 20px 20px 3.5rem;
+
+
+      
     }
-    div.icon a i {
-      font-size: 25px;
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      z-index: 999;
+      display: none;
     }
-    h3 {
-      font-size: 25px;
+
+    .overlay.show {
+      display: block;
     }
-    .icon {
-      padding-left: 0px;
+
+    @media screen and (max-width: 768px) {
+      
+      .header1 {
+        display: none;
+        
+      }
+      
+      .logo{
+        display: contents;
+        
+      }
+      .mobile-menu-button {
+        display: block;
+      }
+      
     }
-  }
+
+
+    
+
+    .box span img {
+      height: 20rem;
+      width: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
